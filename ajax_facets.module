@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- *  Custom project facets implementation.
+ *  Ajax facets implementation.
  */
 
 /**
@@ -42,35 +42,6 @@ function ajax_facets_facetapi_widgets() {
       ),
     ),
   );
-}
-
-/**
- * Implements hook_facetapi_url_processors().
- */
-function ajax_facets_facetapi_url_processors() {
-  return array(
-    'kidmart_multi_facet' => array(
-      'handler' => array(
-        'label' => t('KidMart specific URL processor'),
-        'class' => 'KidmartMultiFacetUrlProcessor',
-      ),
-    ),
-  );
-}
-
-/**
- * Allows for alterations to the searcher definitions.
- *
- * @param array &$searcher_info
- *   The return values of hook_facetapi_searcher_info() implementations.
- *
- * @see hook_facetapi_searcher_info()
- */
-function ajax_facets_facetapi_searcher_info_alter(array &$searcher_info) {
-  if (isset($searcher_info['search_api@default_node_index'])) {
-    // Set own url processor.
-    $searcher_info['search_api@default_node_index']['url processor'] = 'kidmart_multi_facet';
-  }
 }
 
 /**

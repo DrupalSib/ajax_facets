@@ -128,7 +128,7 @@
             $link.show();
           }
           else {
-            $parent.append('<a href="#" class="block-title-link apply-link">' + Drupal.t('применить') + '</a>');
+            $parent.append('<a href="#" class="block-title-link apply-link">' + Drupal.t('Apply') + '</a>');
             $('a.apply-link', $parent).click(function () {
               if (Drupal.ajax_facets.applyFlag) {
                 window.location = Drupal.ajax_facets.applyPath;

@@ -209,9 +209,9 @@
       // We copy all params to force search query with proper arguments.
       data: Drupal.ajax_facets.queryState,
       success: function (response) {
-        if (response.facets != undefined) {
-          Drupal.ajax_facets.queryState['f'] = response.facets;
-        }
+//        if (response.facets != undefined) {
+//          Drupal.ajax_facets.queryState['f'] = response.facets;
+//        }
         if (response.activeItems != undefined) {
           Drupal.ajax_facets.facetQueryState = response.activeItems;
         }

@@ -1,0 +1,8 @@
+name = Ajax facet filters.
+description = Ajax facet filters.
+dependencies[] = facetapi
+;dependencies[] = site_helper
+package = Search Toolkit
+core = 7.x
+
+files[] = plugins/facetapi/ajax_widget_checkboxes.inc
